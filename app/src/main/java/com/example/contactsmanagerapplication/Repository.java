@@ -21,7 +21,7 @@ public class Repository {
     {
 
         ContactsDatabase contactsDatabase = ContactsDatabase.getInstance(application);
-        this.contactDao = ContactsDatabase.getInstance(contactDao);
+        this.contactDao = contactsDatabase.getContactDao();
 
         executorService  = Executors.newSingleThreadExecutor();
 
